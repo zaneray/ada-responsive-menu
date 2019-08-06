@@ -1,0 +1,24 @@
+{
+  "name": "ada-prototype",
+  "version": "0.1.0",
+  "scripts": {
+    "compile-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run compile-css\"",
+    "dev": "npm run watch-css & live-server"
+  },
+  "devDependencies": {
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-property-sort-order-smacss": "^5.0.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-recommended-scss": "^3.3.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.1",
+    "stylelint-scss": "^3.9.3"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.11"
+  }
+}

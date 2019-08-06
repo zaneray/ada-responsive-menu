@@ -1,0 +1,97 @@
+@import "variables";
+@import "menu";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", serif;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+section {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.masthead {
+  padding: 2rem;
+  background: #eee;
+
+  @media (min-width: 800px) {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.masthead-inner {
+  position: relative;
+
+  @media (min-width: 800px) {
+    position: static;
+  }
+}
+
+.masthead-logo {
+  height: $logo-height;
+
+  @media (min-width: 800px) {
+    margin-right: 2rem;
+  }
+}
+
+.hero-banner {
+  position: relative;
+}
+
+.hero-banner-text {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-right: 4vw;
+  padding-left: 4vw;
+  color: #fff;
+  font-size: 3vw;
+}
+
+.page-contents {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+figure {
+  margin: 6rem 0;
+  padding: 0;
+  text-align: center;
+}
+
+figcaption {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  font-style: italic;
+}
