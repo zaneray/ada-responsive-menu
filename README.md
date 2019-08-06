@@ -1,2 +1,11 @@
 # ada-menus
-ADA Accessible Ressponsive menus that are Voice Over and keyboard compatible
+
+ADA Accessible Ressponsive menus that are voice cver and keyboard compatible.
+
+##Getting Started
+
+Run the following commands to install and fire up a live server.
+
+`npm install`
+
+`npm run dev`

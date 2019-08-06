@@ -10,8 +10,8 @@ document.body.onload = function() {
   });
 
   // toggles menu visibility
-  function toggleMenu() {
-    if (htmlBody.classList.contains("menu-show")) {
+  function toggleMenu(close) {
+    if (htmlBody.classList.contains("menu-show") || close) {
       // Hide the menu
       // slide it out of view
       htmlBody.classList.remove("menu-slide-in");
@@ -64,8 +64,21 @@ document.body.onload = function() {
   }
 
   // toggles menu visibility
-  document.getElementById("menu-toggle").addEventListener("click", toggleMenu);
+  document.getElementById("menu-toggle").addEventListener("click", function() {
+    toggleMenu();
+    e.stopPropagation();
+  });
   document.getElementById("menu-overlay").addEventListener("click", toggleMenu);
+
+  //close menus on pressing escape
+  document.addEventListener("keypress", function(e) {
+    e = e || window.event;
+    console.log(e);
+    if (e.key === "Escape") {
+      toggleMenu(true);
+      closeAllMenus();
+    }
+  });
 
   // Core Accessible Menu Javascript
   var menuItems = document.querySelectorAll("li.has-submenu");
