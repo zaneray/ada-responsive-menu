@@ -2,3 +2,4 @@ settings.json
 .prettierignore
 .prettierrc
 .stylelintrc
+package-lock.json

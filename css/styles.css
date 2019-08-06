@@ -328,7 +328,13 @@ section {
   padding-right: 4vw;
   padding-left: 4vw;
   color: #fff;
-  font-size: 3vw; }
+  font-size: 4vw; }
+  .hero-banner-text h1 {
+    font-size: 6vw;
+    line-height: 1.1em; }
+    @media (min-width: 800px) {
+      .hero-banner-text h1 {
+        font-size: 4vw; } }
 
 .page-contents {
   max-width: 800px;
@@ -336,6 +342,7 @@ section {
   margin-left: auto;
   padding-right: 2rem;
   padding-left: 2rem;
+  line-height: 1.6rem;
   text-align: left; }
 
 figure {
