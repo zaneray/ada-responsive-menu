@@ -1,8 +1,8 @@
-# ada-menus
+# Accessible Responsive Menu System
 
 ADA Accessible Ressponsive menus that are voice cver and keyboard compatible.
 
-##Getting Started
+## Getting Started
 
 Run the following commands to install and fire up a live server.
 
@@ -10,6 +10,6 @@ Run the following commands to install and fire up a live server.
 
 `npm run dev`
 
-##Example
+## Example
 
 https://zaneray.github.io/ada-responsive-menu/
