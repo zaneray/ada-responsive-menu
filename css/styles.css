@@ -242,9 +242,6 @@
   background: rgba(0, 0, 0, 0.9); }
   .menu-show .menu-overlay {
     display: block; }
-    @media (min-width: 800px) {
-      .menu-show .menu-overlay {
-        display: none; } }
   .menu-slide-in .menu-overlay {
     opacity: 1; }
 

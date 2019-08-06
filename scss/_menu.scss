@@ -332,9 +332,9 @@ ul.submenu-list {
   .menu-show & {
     display: block;
 
-    @media (min-width: $breakpoint) {
-      display: none;
-    }
+    // @media (min-width: $breakpoint) {
+    //   display: none;
+    // }
   }
 
   .menu-slide-in & {

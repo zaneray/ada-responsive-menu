@@ -4,6 +4,11 @@ document.body.onload = function() {
   var htmlBody = document.querySelector("body");
   var srMenuOpenHide = document.querySelectorAll(".sr-menu-open-hide");
 
+  // stop event bubbling on the menu
+  primaryMenu.addEventListener("click", function(e) {
+    e.stopPropagation();
+  });
+
   // toggles menu visibility
   function toggleMenu() {
     if (htmlBody.classList.contains("menu-show")) {
@@ -60,7 +65,7 @@ document.body.onload = function() {
 
   // toggles menu visibility
   document.getElementById("menu-toggle").addEventListener("click", toggleMenu);
-  document.getElementById("menu-close").addEventListener("click", toggleMenu);
+  document.getElementById("menu-overlay").addEventListener("click", toggleMenu);
 
   // Core Accessible Menu Javascript
   var menuItems = document.querySelectorAll("li.has-submenu");
@@ -71,9 +76,15 @@ document.body.onload = function() {
         if (this.getAttribute("aria-expanded") === "true") {
           // Close the menu
           closeMenu(this);
+
+          // unbind the close all menus
+          htmlBody.removeEventListener("click", closeAllMenus);
         } else {
           //close sibling menus, need to traverse up the tree to find them
           var siblingMenus = this.parentElement.parentElement.children;
+
+          // Bind close to the body
+          htmlBody.addEventListener("click", closeAllMenus);
 
           //TODO probably should close submenus as well.
           for (var i = 0; i < siblingMenus.length; i++) {
