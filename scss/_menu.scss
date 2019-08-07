@@ -1,3 +1,8 @@
+.menu-show {
+  height: 100%;
+  overflow: hidden;
+}
+
 .menu-toggle {
   position: absolute;
   left: 0;
@@ -101,7 +106,7 @@
   /* Corrects font smoothing for webkit */
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  font-weight: inherit;
+  font-weight: 400;
   text-align: inherit;
   cursor: pointer;
   -webkit-appearance: none;
