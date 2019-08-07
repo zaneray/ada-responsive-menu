@@ -61,6 +61,8 @@ document.body.onload = function() {
     openMenus.forEach(function(el) {
       closeMenu(el);
     });
+
+    htmlBody.classList.remove("submenu-open");
   }
 
   // toggles menu visibility
@@ -73,7 +75,6 @@ document.body.onload = function() {
   //close menus on pressing escape
   document.addEventListener("keypress", function(e) {
     e = e || window.event;
-    console.log(e);
     if (e.key === "Escape") {
       toggleMenu(true);
       closeAllMenus();
@@ -89,7 +90,7 @@ document.body.onload = function() {
         if (this.getAttribute("aria-expanded") === "true") {
           // Close the menu
           closeMenu(this);
-
+          htmlBody.classList.remove("submenu-open");
           // unbind the close all menus
           htmlBody.removeEventListener("click", closeAllMenus);
         } else {
@@ -105,6 +106,9 @@ document.body.onload = function() {
               closeMenu(siblingMenus[i].children[0]);
             }
           }
+
+          // add a class to the body to indicate menus are open in case we need other things styled
+          htmlBody.classList.add("submenu-open");
 
           // open the menu
           this.parentNode.classList.add("open");
