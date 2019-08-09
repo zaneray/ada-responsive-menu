@@ -46,7 +46,7 @@ This lives in the DOM below the `nav` element. This creates an overlay that can 
 
 #### Controlling Focus!!
 
-This part is crucial to focusing a screen reader on the menu and nothing else. Any elements on the page that are outside of the menu currently need to hava a class of `sr-menu-open-hide` which javascript then gives `aria-hidden="false"` when the menu is open. Ideally your markup is simple enough that the menu is one element and the rest of the page content is another element that has this class.
+This part is crucial to focusing a screen reader on the menu when it is open. Any elements on the page outside of the menu need to hava a class of `sr-menu-open-hide` which javascript gives `aria-hidden="false"` when the menu is open. Ideally your markup is simple enough so a menu is one element and the rest of the page content is another element that has this class.
 
 ### Navigation Elements
 
