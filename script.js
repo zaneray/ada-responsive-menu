@@ -1,8 +1,10 @@
 document.body.onload = function() {
-  // toggle menu functionality
+  // DOM elements used in menu
   var primaryMenu = document.getElementById("primary-menu");
   var htmlBody = document.querySelector("body");
   var srMenuOpenHide = document.querySelectorAll(".sr-menu-open-hide");
+  var menuToggle = document.getElementById("menu-toggle");
+  var menuOverlay = document.getElementById("menu-overlay");
 
   // stop event bubbling on the menu
   primaryMenu.addEventListener("click", function(e) {
@@ -66,11 +68,11 @@ document.body.onload = function() {
   }
 
   // toggles menu visibility
-  document.getElementById("menu-toggle").addEventListener("click", function() {
+  menuToggle.addEventListener("click", function() {
     toggleMenu();
     e.stopPropagation();
   });
-  document.getElementById("menu-overlay").addEventListener("click", toggleMenu);
+  menuOverlay.addEventListener("click", toggleMenu);
 
   //close menus on pressing escape
   document.addEventListener("keypress", function(e) {
