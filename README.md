@@ -44,6 +44,10 @@ This is the mobile menu toggle, or "Hamburger" style menu. the id is bound to th
 
 This lives in the DOM below the `nav` element. This creates an overlay that can be clicked or touched at mobile as well as closes the desktop navigation. The `button` element inside is focusable by screen readers.
 
+#### Controlling Focus!!
+
+This part is crucial to focusing a screen reader on the menu and nothing else. Any elements on the page that are outside of the menu currently need to hava a class of `sr-menu-open-hide` which javascript then gives `aria-hidden="false"` when the menu is open. Ideally your markup is simple enough that the menu is one element and the rest of the page content is another element that has this class.
+
 ### Navigation Elements
 
 #### Primary Navigation
