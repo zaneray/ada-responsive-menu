@@ -1,4 +1,4 @@
-# Accessible Responsive Menu System
+# Accessible Responsive Menu or Navigation System
 
 ADA Accessible Responsive menus that are voice over and keyboard compatible. For now follow menu Markup with ID and classes and more documentation will come later.
 
