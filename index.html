@@ -1,95 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Accessible Menus</title>
-<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-  </head>
-  <body>
-    <header class="masthead" aria-label="Masthead">
-      <div class="masthead-inner sr-menu-open-hide">
-        <button class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-label="Open Menu"></button>
-        <a href="https://www.zaneray.com" target="_blank" title="Link to Zaneray.com"><img src="images/zr.png" alt="The ZaneRay Group" class="masthead-logo"></a>
-      </div>
-      <nav id="primary-menu" class="primary-menu" aria-label="Primary Navigation">
-        <ul class="menu-list">
-          <li class="menu-list-item has-submenu">
-            <a href="#shop" class="menu-button" role="button" aria-expanded="false" aria-haspopup="true">Shop</a>
-            <ul class="submenu-list"  aria-expanded="false" aria-hidden="true" aria-label="Shop Subnavigation">
-              <li class="submenu-list-item">
-                <a href="#" class="menu-link submenu-link submenu-link-heading">Shoes</a>
+<head>
+  <title>Accessible Menus</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+</head>
+<body>
+<header class="masthead" aria-label="Masthead">
+  <div class="masthead-inner sr-menu-open-hide">
+    <button class="menu-toggle" id="menu-toggle" aria-haspopup="true" aria-label="Open Menu"></button>
+    <a href="https://www.zaneray.com" target="_blank" title="Link to Zaneray.com"><img src="images/zr.png"
+                                                                                       alt="The ZaneRay Group"
+                                                                                       class="masthead-logo"></a>
+  </div>
+
+  <!-- TODO: dynamically include aria-current="page" to indicate active page.  -->
+  <!-- TODO: in the future we should also offer hover, active, current, visited styling for menu items.  -->
+
+
+  <nav id="primary-menu" class="primary-menu" aria-label="Primary Navigation">
+    <ul class="menu-list">
+      <li class="menu-list-item has-submenu">
+        <a href="#shop" class="menu-button" role="button" aria-expanded="false" aria-haspopup="true">Shop</a>
+        <ul class="submenu-list" aria-hidden="true" aria-label="Shop Subnavigation">
+          <li class="submenu-list-item">
+            <a href="#" class="menu-link submenu-link submenu-link-heading">Shoes</a>
+          </li>
+          <li class="menu-list-item submenu-list-item has-submenu">
+            <button class="submenu-button" aria-expanded="false" aria-haspopup="true">Shirts</button>
+            <ul class="sub-submenu-list" aria-label="Shirts Subnavigation">
+              <li class="sub-submenu-list-item"><a href="#shirts" class="menu-link submenu-link submenu-link-heading">Shop
+                All Shirts</a></li>
+              <li class="sub-submenu-list-item"><a href="#buttondowns" class="menu-link submenu-link">Button Downs</a>
               </li>
-              <li class="menu-list-item submenu-list-item has-submenu">
-                <button class="submenu-button" aria-expanded="false" aria-haspopup="true">Shirts</button>
-                <ul class="sub-submenu-list"  aria-expanded="false"  aria-label="Shirts Subnavigation">
-                  <li class="sub-submenu-list-item"><a href="#shirts" class="menu-link submenu-link submenu-link-heading">Shop All Shirts</a></li>
-                  <li class="sub-submenu-list-item"><a href="#buttondowns" class="menu-link submenu-link">Button Downs</a></li>
-                  <li class="sub-submenu-list-item"><a href="#tshirts" class="menu-link submenu-link">T-shirts</a></li>
-                  <li class="sub-submenu-list-item"><a href="#tanktops" class="menu-link submenu-link">Tanktops</a></li>
-                  <li class="sub-submenu-list-item"><a href="#flannels" class="menu-link submenu-link">Flannels</a></li>
-                </ul>
-              </li>
-              <li class="submenu-list-item">
-                <a href="#pants" class="submenu-link submenu-link-heading">Pants</a>
-              </li>
-              <li class="menu-list-item submenu-list-item has-submenu">
-                <button class="submenu-button" aria-expanded="false" aria-haspopup="true">Jackets</button>
-                <ul class="sub-submenu-list" aria-expanded="false" aria-label="Jackets Subnavigation">
-                  <li class="sub-submenu-list-item"><a href="#jackets" class="menu-link submenu-link submenu-link-heading">Shop All Jackets</a></li>
-                  <li class="sub-submenu-list-item"><a href="#down" class="menu-link submenu-link">Down</a></li>
-                  <li class="sub-submenu-list-item"><a href="#waterproof" class="menu-link submenu-link">Waterproof</a></li>
-                  <li class="sub-submenu-list-item"><a href="#softshell" class="menu-link submenu-link">Softshell</a></li>
-                  <li class="sub-submenu-list-item"><a href="#fleece" class="menu-link submenu-link">Fleece</a></li>
-                </ul>
-              </li>
+              <li class="sub-submenu-list-item"><a href="#tshirts" class="menu-link submenu-link">T-shirts</a></li>
+              <li class="sub-submenu-list-item"><a href="#tanktops" class="menu-link submenu-link">Tanktops</a></li>
+              <li class="sub-submenu-list-item"><a href="#flannels" class="menu-link submenu-link">Flannels</a></li>
             </ul>
           </li>
-          <li class="menu-list-item has-submenu">
-            <a href="#about-us" class="menu-button" role="button" aria-expanded="false" aria-haspopup="true">About Us</a>
-            <ul class="submenu-list" aria-expanded="false" aria-hidden="true" aria-label="About Us Subnavigation">
-              <li class="submenu-list-item">
-                <a href="#our-story" class="menu-link submenu-link">Our Story</a>
-              </li>
-              <li class="submenu-list-item">
-                <a href="#the-team" class="menu-link submenu-link">The Team</a>
-              </li>
-              <li class="submenu-list-item">
-                <a href="#faq" class="menu-link submenu-link">FAQs</a>
-              </li>
+          <li class="submenu-list-item">
+            <a href="#pants" class="submenu-link submenu-link-heading">Pants</a>
+          </li>
+          <li class="menu-list-item submenu-list-item has-submenu">
+            <button class="submenu-button" aria-expanded="false" aria-haspopup="true">Jackets</button>
+            <ul class="sub-submenu-list" aria-label="Jackets Subnavigation">
+              <li class="sub-submenu-list-item"><a href="#jackets" class="menu-link submenu-link submenu-link-heading">Shop
+                All Jackets</a></li>
+              <li class="sub-submenu-list-item"><a href="#down" class="menu-link submenu-link">Down</a></li>
+              <li class="sub-submenu-list-item"><a href="#waterproof" class="menu-link submenu-link">Waterproof</a></li>
+              <li class="sub-submenu-list-item"><a href="#softshell" class="menu-link submenu-link">Softshell</a></li>
+              <li class="sub-submenu-list-item"><a href="#fleece" class="menu-link submenu-link">Fleece</a></li>
             </ul>
           </li>
-          <li class="menu-list-item"><a href="#support" class="menu-link">Support</a></li>
-      </ul>
-      </nav>
-      <div id="menu-overlay" class="menu-overlay">
-        <button class="primary-menu-close" id="menu-close" aria-label="Close Menu" title="Close Menu"></button>
+        </ul>
+      </li>
+      <li class="menu-list-item has-submenu">
+        <a href="#about-us" class="menu-button" role="button" aria-expanded="false" aria-haspopup="true">About Us</a>
+        <ul class="submenu-list" aria-hidden="true" aria-label="About Us Subnavigation">
+          <li class="submenu-list-item">
+            <a href="#our-story" class="menu-link submenu-link">Our Story</a>
+          </li>
+          <li class="submenu-list-item">
+            <a href="#the-team" class="menu-link submenu-link">The Team</a>
+          </li>
+          <li class="submenu-list-item">
+            <a href="#faq" class="menu-link submenu-link">FAQs</a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-list-item"><a href="#support" class="menu-link">Support</a></li>
+    </ul>
+  </nav>
+  <div id="menu-overlay" class="menu-overlay">
+    <button class="primary-menu-close" id="menu-close" aria-label="Close Menu" title="Close Menu"></button>
+  </div>
+</header>
+
+
+<div id="page" class="sr-menu-open-hide">
+  <main>
+    <header class="hero-banner">
+      <div class="hero-banner-text">
+        <h1>Accessible Menu System</h1>
       </div>
-  </header>
+      <img src="images/fpo1.jpg" alt="Background Image of Mountains at Sunset" class="hero-image">
+    </header>
+    <section class="page-contents">
+      <p>At <a href="https://www.zaneray.com" target="_blank">ZaneRay</a>, we're taking accessibility seriously. This
+        navigation is keyboard and voiceover navigable at desktop and mobile for all devices. Updates or comments <a
+            href="https://github.com/zaneray/ada-responsive-menu" target="_blank">see our Github project page</a>. </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida luctus aliquam. Nam fermentum pretium
+        eros, eu tincidunt risus vehicula vel. Donec purus odio, ultrices in blandit a, finibus sit amet ante. Curabitur
+        auctor felis quis rutrum malesuada. Nunc nec eros nisl. Aenean interdum quam ipsum, et maximus enim malesuada
+        luctus. Cras at eleifend velit. Vivamus id justo ac urna volutpat semper et quis dolor. Vivamus lobortis augue
+        et purus semper convallis. Curabitur sollicitudin dictum efficitur. Aliquam vehicula leo in odio mollis
+        condimentum. Aenean sit amet libero ipsum.</p>
+      <figure>
+        <img src="images/fpo2.jpg" alt="Cotopaxi At Sunset">
+        <figcaption>A rare glimpse of Cotopaxi as the clouds clear</figcaption>
+      </figure>
+      <p>Nullam egestas commodo pretium. Integer sit amet gravida tortor. Nulla tincidunt, tellus vel mattis lobortis,
+        neque dolor molestie quam, sed maximus velit tortor eget ex. Praesent lacinia ullamcorper libero sodales
+        efficitur. Donec erat eros, aliquet in massa interdum, varius condimentum purus. Aenean a sem at mauris egestas
+        scelerisque a ac est. Vestibulum feugiat erat nec tortor mollis semper. Curabitur libero erat, pretium in dolor
+        nec, efficitur fermentum odio. Donec est leo, aliquam aliquet congue ac, ultrices non mi. Sed at massa odio.
+        Quisque dignissim lacus sit amet lorem luctus lacinia.</p>
 
+      <p>Cras at bibendum sapien, id tincidunt ipsum. Donec suscipit, urna in vulputate vehicula, arcu neque fringilla
+        magna, et convallis ante diam eu neque. Aenean vel fermentum lorem, sit amet ultricies odio. Nunc at dolor
+        elementum, tincidunt justo non, vehicula ligula. Nam risus nulla, pellentesque in ante et, scelerisque cursus
+        libero. Praesent molestie ipsum sem. Etiam congue, leo nec bibendum imperdiet, leo sem blandit enim, eu feugiat
+        augue justo et tellus. Pellentesque convallis erat sit amet lorem semper ullamcorper.</p>
+    </section>
+  </main>
 
-    <div id="page" class="sr-menu-open-hide">
-    <main>
-      <header class="hero-banner">
-        <div class="hero-banner-text">
-          <h1>Accessible Menu System</h1>
-        </div>
-        <img src="images/fpo1.jpg" alt="Background Image of Mountains at Sunset" class="hero-image">
-      </header>
-      <section class="page-contents">
-        <p>At <a href="https://www.zaneray.com" target="_blank">ZaneRay</a>, we're taking accessibility seriously. This navigation is keyboard and voiceover navigable at desktop and mobile for all devices. Updates or comments <a href="https://github.com/zaneray/ada-responsive-menu" target="_blank">see our Github project page</a>. </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida luctus aliquam. Nam fermentum pretium eros, eu tincidunt risus vehicula vel. Donec purus odio, ultrices in blandit a, finibus sit amet ante. Curabitur auctor felis quis rutrum malesuada. Nunc nec eros nisl. Aenean interdum quam ipsum, et maximus enim malesuada luctus. Cras at eleifend velit. Vivamus id justo ac urna volutpat semper et quis dolor. Vivamus lobortis augue et purus semper convallis. Curabitur sollicitudin dictum efficitur. Aliquam vehicula leo in odio mollis condimentum. Aenean sit amet libero ipsum.</p>
-        <figure>
-          <img src="images/fpo2.jpg" alt="Cotopaxi At Sunset">
-           <figcaption>A rare glimpse of Cotopaxi as the clouds clear</figcaption>
-        </figure>
-        <p>Nullam egestas commodo pretium. Integer sit amet gravida tortor. Nulla tincidunt, tellus vel mattis lobortis, neque dolor molestie quam, sed maximus velit tortor eget ex. Praesent lacinia ullamcorper libero sodales efficitur. Donec erat eros, aliquet in massa interdum, varius condimentum purus. Aenean a sem at mauris egestas scelerisque a ac est. Vestibulum feugiat erat nec tortor mollis semper. Curabitur libero erat, pretium in dolor nec, efficitur fermentum odio. Donec est leo, aliquam aliquet congue ac, ultrices non mi. Sed at massa odio. Quisque dignissim lacus sit amet lorem luctus lacinia.</p>
-
-        <p>Cras at bibendum sapien, id tincidunt ipsum. Donec suscipit, urna in vulputate vehicula, arcu neque fringilla magna, et convallis ante diam eu neque. Aenean vel fermentum lorem, sit amet ultricies odio. Nunc at dolor elementum, tincidunt justo non, vehicula ligula. Nam risus nulla, pellentesque in ante et, scelerisque cursus libero. Praesent molestie ipsum sem. Etiam congue, leo nec bibendum imperdiet, leo sem blandit enim, eu feugiat augue justo et tellus. Pellentesque convallis erat sit amet lorem semper ullamcorper.</p>
-      </section>
-    </main>
-
-       </div>
+</div>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
