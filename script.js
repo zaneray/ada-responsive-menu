@@ -88,7 +88,7 @@ document.body.onload = function () {
   document.addEventListener('click', (event) => {
 
     // toggle mobile menu
-    if (event.target.matches('#menu-toggle, #menu-overlay, #menu-close')) {
+    if (event.target.closest('#menu-toggle, #menu-overlay, #menu-close')) {
       toggleMenu();
       event.stopPropagation();
       return;
@@ -132,7 +132,14 @@ document.body.onload = function () {
     }
 
     // if we have a menu open then we close it
-    if (document.body.classList.contains('submenu-open')) {
+    if (
+        document.body.classList.contains("submenu-open") &&
+        !event.target.closest(".menu-list-item")
+    ) {
+      closeAllMenus();
+    }
+
+    if (event.target.closest(".submenu-close")) {
       closeAllMenus();
     }
 
